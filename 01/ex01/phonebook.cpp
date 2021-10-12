@@ -11,14 +11,46 @@
 /* ************************************************************************** */
 
 #include <iostream>
+#include <string>
+
+using namespace std;
+
+class Contact {
+	public:
+		string	FirstName;
+		string	LastName;
+		string	NickName;
+		int		Phone;
+		string	Sercret;
+};
+
+static void	AddContact(int *i)
+{
+	if (*i == 9)
+		*i = 0;
+	std::cout << "I WILL ADD YOU" << *i << std::endl;
+	*i += 1;
+}
+
+static void	PrintBook()
+{
+	std::cout << "I WILL SERACH YOU" << std::endl;
+}
 
 int		main()
 {
-	std::string name;
+	Contact phonebook[8];
+	int		i;
 
-	std::cout << "Please enter name ";
-	std::getline (std::cin, name);
-	std::cout << "Hello " << name << "!" << std::endl;
+	i = 0;
+	for (std::string command; std::getline (std::cin, command);) {
+		if (command == "EXIT")
+			break ;
+		else if (command == "ADD")
+			AddContact(&i);
+		else if (command == "SEARCH")
+			PrintBook();
+	}
 
 	return (0);
 }
