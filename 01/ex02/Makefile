@@ -1,10 +1,8 @@
-NAME		= 	phonebook
+NAME		= 	account
 CC			= 	clang++
 RM			=	rm -f
 
-SRC			= 	phonebook.cpp\
-				add.cpp\
-				search.cpp
+SRC			= 	Account.cpp
 OBJ			= 	$(SRC:%.cpp=%.o)
 FLAGS		=	-Wall -Wextra -Werror
 LIBS		=	-o
