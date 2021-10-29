@@ -2,9 +2,10 @@ NAME		= 	account
 CC			= 	clang++
 RM			=	rm -f
 
-SRC			= 	Account.cpp
+SRC			= 	tests.cpp\
+				Account.cpp
 OBJ			= 	$(SRC:%.cpp=%.o)
-FLAGS		=	-Wall -Wextra -Werror
+# FLAGS		=	-Wall -Wextra -Werror
 LIBS		=	-o
 
 all: $(NAME)
