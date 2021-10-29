@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/18 15:12:27 by katherine     #+#    #+#                 */
-/*   Updated: 2021/10/29 14:05:41 by kfu           ########   odam.nl         */
+/*   Updated: 2021/10/29 14:12:21 by kfu           ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 #include <iomanip>
 #include <string>
 #include <sstream>
-
-using namespace std;
 
 int Account::_nbAccounts = 0;
 int Account::_totalAmount = 0;
