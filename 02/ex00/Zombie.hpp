@@ -6,7 +6,7 @@
 /*   By: kfu <kfu@student.codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/29 13:52:08 by kfu           #+#    #+#                 */
-/*   Updated: 2021/10/29 14:15:40 by kfu           ########   odam.nl         */
+/*   Updated: 2021/10/29 15:53:35 by kfu           ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,12 @@
 # include <sstream>
 
 class Zombie {
+	public:
+		annouce(void);
+		~murder_zombie(void);
+
 	private:
-		string Name;
-		string 
+		string _ZombieName;
 }
 
 #endif

@@ -6,7 +6,13 @@
 /*   By: kfu <kfu@student.codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/29 13:52:00 by kfu           #+#    #+#                 */
-/*   Updated: 2021/10/29 13:52:01 by kfu           ########   odam.nl         */
+/*   Updated: 2021/10/29 15:42:13 by kfu           ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Zombie.hpp"
+
+void randomChump(std::string name)
+{
+	
+}
