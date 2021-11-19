@@ -6,13 +6,13 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/18 10:17:11 by katherine     #+#    #+#                 */
-/*   Updated: 2021/10/18 13:03:15 by katherine     ########   odam.nl         */
+/*   Updated: 2021/11/13 12:11:03 by kfu           ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "phonebook.hpp"
 
-static int	CheckIndex(string str)
+static int	CheckIndex(std::string str)
 {
 	for (size_t i = 0; i < str.length() ; i++)
 	{
@@ -40,8 +40,8 @@ static void		PrintIndivual(Phonebook *phonebook, int index)
 
 static void    SearchIndivual(Phonebook *phonebook)
 {
-	string	tmp;
-	int		index;
+	std::string	tmp;
+	int			index;
 
 	std::cout << "Index for further inspection: ";
 	std::getline (std::cin, tmp);
@@ -62,15 +62,15 @@ static void    SearchIndivual(Phonebook *phonebook)
 static void	PrintSingleContact(Contact *current)
 {
 	if (current->FirstName.length() <= 10)
-		std::cout << setw(10) << current->FirstName << "|";
+		std::cout << std::setw(10) << current->FirstName << "|";
 	else
 		std::cout << current->FirstName.substr(0, 9) + "." << "|";
 	if (current->LastName.length() <= 10)
-		std::cout << setw(10) << current->LastName << "|";
+		std::cout << std::setw(10) << current->LastName << "|";
 	else
 		std::cout << current->LastName.substr(0, 9) + "." << "|";
 	if (current->NickName.length() <= 10)
-		std::cout << setw(10) << current->NickName << std::endl;
+		std::cout << std::setw(10) << current->NickName << std::endl;
 	else
 		std::cout << current->NickName.substr(0, 9) + "." << std::endl;
 }
@@ -83,7 +83,7 @@ void	PrintBook(Phonebook *phonebook)
 	for (int i = 0; i < phonebook->size; i++)
 	{
 		current = &phonebook->contacts[i];
-		std::cout << setw(10) << i << "|";
+		std::cout << std::setw(10) << i << "|";
 		PrintSingleContact(current);
 	}
 	std::cout << std::endl;

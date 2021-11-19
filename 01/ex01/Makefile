@@ -1,12 +1,12 @@
-NAME		= 	phonebook
+NAME		= 	zombie
 CC			= 	clang++
 RM			=	rm -f
 
-SRC			= 	phonebook.cpp\
-				add.cpp\
-				search.cpp
+SRC			= 	main.cpp\
+				Zombie.cpp\
+				ZombieHorde.cpp
 OBJ			= 	$(SRC:%.cpp=%.o)
-FLAGS		=	-Wall -Wextra -Werror
+# FLAGS		=	-Wall -Wextra -Werror
 LIBS		=	-o
 
 all: $(NAME)

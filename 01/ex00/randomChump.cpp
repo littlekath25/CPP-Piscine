@@ -1,23 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   Zombie.cpp                                         :+:    :+:            */
+/*   randomChump.cpp                                    :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: kfu <kfu@student.codam.nl>                   +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/10/29 13:52:06 by kfu           #+#    #+#                 */
-/*   Updated: 2021/10/29 15:56:31 by kfu           ########   odam.nl         */
+/*   Created: 2021/10/29 13:52:00 by kfu           #+#    #+#                 */
+/*   Updated: 2021/11/13 14:15:55 by kfu           ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie::annouce(void)
-{
-	std::cout << _ZombieName << " BraiiiiiiinnnzzzZ..." << std::endl;
-}
+void randomChump( std::string name ){
+	Zombie *NewZombie;
 
-Zombie::~murder_zombie(void)
-{
-	std::cout << "MuuuuUuuuurdereddd.... " << _ZombieName << std::endl;
+	NewZombie = NewZombie->newZombie(name);
+	NewZombie->announce();
+	delete NewZombie;
 }

@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/18 09:28:02 by katherine     #+#    #+#                 */
-/*   Updated: 2021/10/29 14:15:59 by kfu           ########   odam.nl         */
+/*   Updated: 2021/11/13 12:09:06 by kfu           ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@
 
 class Contact {
 	public:
-		string	FirstName;
-		string	LastName;
-		string	NickName;
-		string	Phone;
-		string	Secret;
+		std::string	FirstName;
+		std::string	LastName;
+		std::string	NickName;
+		std::string	Phone;
+		std::string	Secret;
 };
 
 class Phonebook {

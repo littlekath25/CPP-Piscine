@@ -1,13 +1,10 @@
-NAME		= 	zombie
+NAME		= 	megaphone
 CC			= 	clang++
 RM			=	rm -f
 
-SRC			= 	main.cpp\
-				Zombie.cpp\
-				newZombie.cpp\
-				randomChump.cpp
+SRC			= 	megaphone.cpp
 OBJ			= 	$(SRC:%.cpp=%.o)
-# FLAGS		=	-Wall -Wextra -Werror
+FLAGS		=	-Wall -Wextra -Werror
 LIBS		=	-o
 
 all: $(NAME)

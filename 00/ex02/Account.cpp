@@ -6,15 +6,12 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/18 15:12:27 by katherine     #+#    #+#                 */
-/*   Updated: 2021/10/29 14:12:21 by kfu           ########   odam.nl         */
+/*   Updated: 2021/11/13 12:07:15 by kfu           ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Account.hpp"
 #include <iostream>
-#include <iomanip>
-#include <string>
-#include <sstream>
 
 int Account::_nbAccounts = 0;
 int Account::_totalAmount = 0;
