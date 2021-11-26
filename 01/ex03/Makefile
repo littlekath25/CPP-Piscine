@@ -1,10 +1,11 @@
-NAME		= 	zombie
+NAME		= 	attack
 CC			= 	clang++
 RM			=	rm -f
 
 SRC			= 	main.cpp\
-				Zombie.cpp\
-				ZombieHorde.cpp
+				HumanA.cpp\
+				HumanB.cpp\
+				Weapon.cpp
 OBJ			= 	$(SRC:%.cpp=%.o)
 FLAGS		=	-Wall -Wextra -Werror
 LIBS		=	-o

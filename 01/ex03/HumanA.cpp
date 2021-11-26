@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ZombieHorde.cpp                                    :+:    :+:            */
+/*   HumanA.cpp                                         :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: kfu <kfu@student.codam.nl>                   +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/10/29 13:52:00 by kfu           #+#    #+#                 */
-/*   Updated: 2021/11/19 16:01:41 by kfu           ########   odam.nl         */
+/*   Created: 2021/11/19 16:49:06 by kfu           #+#    #+#                 */
+/*   Updated: 2021/11/19 16:51:03 by kfu           ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "HumanA.hpp"
 
-Zombie* zombieHorde( int N, std::string name )
+void HumanA::attack(void)
 {
-	Zombie *ZombieHorde = new Zombie[N];
-
-	for (int i = 0; i < N; i++)
-	{
-		ZombieHorde[i].SetName(name);
-		ZombieHorde->announce();
-	}
-	return (ZombieHorde);
-}
+	std::cout << _name << " attacks with " << _weapon.getType() << std::endl;
+};

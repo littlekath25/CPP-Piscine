@@ -5,18 +5,25 @@
 /*                                                     +:+                    */
 /*   By: kfu <kfu@student.codam.nl>                   +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/10/29 13:52:04 by kfu           #+#    #+#                 */
-/*   Updated: 2021/11/19 16:11:33 by kfu           ########   odam.nl         */
+/*   Created: 2021/11/19 16:09:49 by kfu           #+#    #+#                 */
+/*   Updated: 2021/11/19 16:24:42 by kfu           ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+# include <iostream>
 
-int		main(void)
+int	main(void)
 {
-	std::string	name;
-	std::cout << "🧟 Enter a name and see what happens... 🧟‍" << std::endl;
-	std::getline (std::cin, name);
-	randomChump(name);
+	std::string Brain = "HI THIS IS BRAIN";
+	std::string *stringPTR = &Brain;
+	std::string &stringREF = Brain;
+	
+	std::cout << "String address:    " << &Brain << std::endl;
+	std::cout << "StringPTR address: " << stringPTR << std::endl;
+	std::cout << "StringREF address: " << &stringREF << std::endl;
+	std::cout << std::endl;
+	std::cout << "String:    " << Brain << std::endl;
+	std::cout << "StringPTR: " << *stringPTR << std::endl;
+	std::cout << "StringREF: " << stringREF << std::endl;
 	return (0);
 }

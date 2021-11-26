@@ -1,10 +1,8 @@
-NAME		= 	zombie
+NAME		= 	replace
 CC			= 	clang++
 RM			=	rm -f
 
-SRC			= 	main.cpp\
-				Zombie.cpp\
-				ZombieHorde.cpp
+SRC			= 	main.cpp
 OBJ			= 	$(SRC:%.cpp=%.o)
 FLAGS		=	-Wall -Wextra -Werror
 LIBS		=	-o

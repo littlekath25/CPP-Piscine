@@ -1,25 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ZombieHorde.cpp                                    :+:    :+:            */
+/*   HumanB.hpp                                         :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: kfu <kfu@student.codam.nl>                   +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/10/29 13:52:00 by kfu           #+#    #+#                 */
-/*   Updated: 2021/11/19 16:01:41 by kfu           ########   odam.nl         */
+/*   Created: 2021/11/19 16:39:47 by kfu           #+#    #+#                 */
+/*   Updated: 2021/11/26 12:30:47 by kfu           ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef HUMANB_H
+# define HUMANB_H
 
-Zombie* zombieHorde( int N, std::string name )
-{
-	Zombie *ZombieHorde = new Zombie[N];
+#include <iostream>
+#include "Weapon.hpp"
 
-	for (int i = 0; i < N; i++)
-	{
-		ZombieHorde[i].SetName(name);
-		ZombieHorde->announce();
-	}
-	return (ZombieHorde);
-}
+class HumanB {
+	private:
+		std::string _name;
+		Weapon *_weapon;
+	public:
+		HumanB(std::string name)
+			: _name(name)
+		{};
+		HumanB(std::string name, Weapon &weapon)
+			: _name(name), _weapon(&weapon)
+		{};
+		void	setWeapon(Weapon &weapon)
+		{
+			_weapon = &weapon;
+		};
+		void attack();
+};
+
+#endif

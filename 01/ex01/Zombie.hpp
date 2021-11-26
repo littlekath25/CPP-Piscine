@@ -6,7 +6,7 @@
 /*   By: kfu <kfu@student.codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/29 13:52:08 by kfu           #+#    #+#                 */
-/*   Updated: 2021/11/13 14:48:56 by kfu           ########   odam.nl         */
+/*   Updated: 2021/11/19 15:57:06 by kfu           ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,19 @@
 
 class Zombie {
 	public:
-		void announce( void );
-		Zombie* newZombie( std::string name );
+		Zombie(){};
 		~Zombie(void) {
 			std::cout << "Killing the zombie " << _ZombieName << std::endl; 
 		};
+		void announce( void );
+		void SetName( std::string name ) {
+			_ZombieName = name;
+		}
 
 	private:
 		std::string _ZombieName;
 };
 
-void randomChump( std::string name );
+Zombie* zombieHorde( int N, std::string name );
 
 #endif

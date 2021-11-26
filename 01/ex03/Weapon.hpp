@@ -1,25 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ZombieHorde.cpp                                    :+:    :+:            */
+/*   Weapon.hpp                                         :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: kfu <kfu@student.codam.nl>                   +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/10/29 13:52:00 by kfu           #+#    #+#                 */
-/*   Updated: 2021/11/19 16:01:41 by kfu           ########   odam.nl         */
+/*   Created: 2021/11/19 16:34:56 by kfu           #+#    #+#                 */
+/*   Updated: 2021/11/26 12:00:29 by kfu           ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef WEAPON_H
+# define WEAPON_H
 
-Zombie* zombieHorde( int N, std::string name )
-{
-	Zombie *ZombieHorde = new Zombie[N];
+#include <iostream>
 
-	for (int i = 0; i < N; i++)
-	{
-		ZombieHorde[i].SetName(name);
-		ZombieHorde->announce();
-	}
-	return (ZombieHorde);
-}
+class Weapon {
+	public:
+		Weapon(std::string WeaponType)
+		{
+			_type = WeaponType;
+		};
+		std::string getType(void)
+		{
+			return (_type);
+		};
+		void		setType(std::string type)
+		{
+			_type = type;
+		};
+	private:
+		std::string _type;
+};
+
+#endif
