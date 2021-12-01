@@ -1,10 +1,10 @@
-NAME		= 	replace
+NAME		= 	karen
 CC			= 	clang++
 RM			=	rm -f
 
-SRC			= 	main.cpp
+SRC			= 	main.cpp\
+				Karen.cpp
 OBJ			= 	$(SRC:%.cpp=%.o)
-REP			=	*.replace
 FLAGS		=	-Wall -Wextra -Werror
 LIBS		=	-o
 
@@ -17,7 +17,7 @@ $(NAME): $(OBJ)
 	$(CC) $(FLAGS) -c $(LIBS) $@ $<
 
 clean:
-	$(RM) $(OBJ) $(REP)
+	$(RM) $(OBJ)
 
 fclean: clean
 	$(RM) $(NAME)
