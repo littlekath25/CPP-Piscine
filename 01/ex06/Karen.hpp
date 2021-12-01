@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   main.cpp                                           :+:    :+:            */
+/*   Karen.hpp                                          :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: kfu <kfu@student.codam.nl>                   +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/12/01 15:15:55 by kfu           #+#    #+#                 */
-/*   Updated: 2021/12/01 20:48:13 by katherine     ########   odam.nl         */
+/*   Created: 2021/12/01 15:15:53 by kfu           #+#    #+#                 */
+/*   Updated: 2021/12/01 16:08:10 by kfu           ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Karen.hpp"
+#include <iostream>
 
-int		main(void)
-{
-	Karen Jessica;
-	
-	Jessica.complain("debug");
-	Jessica.complain("info");
-	Jessica.complain("warning");
-	Jessica.complain("error");
-	return (0);
-}
+class Karen {
+	public:
+		void complain(std::string level);
+	private:
+		void debug(void);
+		void info(void);
+		void warning(void);
+		void error(void);
+};
