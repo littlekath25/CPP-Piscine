@@ -1,5 +1,5 @@
-NAME		= 	karen
-CC			= 	clang++ -E
+NAME		= 	karenFilter
+CC			= 	clang++
 RM			=	rm -f
 
 SRC			= 	main.cpp\

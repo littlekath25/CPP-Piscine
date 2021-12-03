@@ -6,14 +6,15 @@
 /*   By: kfu <kfu@student.codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/01 15:15:50 by kfu           #+#    #+#                 */
-/*   Updated: 2021/12/01 22:05:13 by katherine     ########   odam.nl         */
+/*   Updated: 2021/12/03 16:44:57 by kfu           ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Karen.hpp"
+
 #define ARRAY_SIZE(x) (int)((sizeof(x)) / (sizeof(x[0])))
 
-void	Karen::complain(std::string level)
+bool	Karen::complain(std::string level)
 {
 	void	(Karen::*complaint[])(void) = {
 		&Karen::debug,
@@ -23,17 +24,22 @@ void	Karen::complain(std::string level)
 	};
 	
 	std::string ComplaintLevels[] = {
-		"debug",
-		"info",
-		"warning",
-		"error"
+		"DEBUG",
+		"INFO",
+		"WARNING",
+		"ERROR"
 	};
 
 	for (int i = 0; i < ARRAY_SIZE(ComplaintLevels); i++)
 	{
 		if (level == ComplaintLevels[i])
-			(this->*complaint[i])();
+		{
+			while (i < 4)
+				(this->*complaint[i++])();
+			return (true);
+		}
 	}
+	return (false);
 }
 
 void	Karen::debug(void)
