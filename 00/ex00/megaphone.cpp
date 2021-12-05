@@ -6,11 +6,14 @@
 /*   By: kfu <kfu@student.codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/11 16:53:42 by kfu           #+#    #+#                 */
-/*   Updated: 2021/10/11 19:09:33 by kfu           ########   odam.nl         */
+/*   Updated: 2021/12/05 12:55:34 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#ifndef MEGAPHONE_HPP
+# define MEGAPHONE_HPP
+
+# include <iostream>
 
 int		main(int argc, char **argv)
 {
@@ -27,3 +30,5 @@ int		main(int argc, char **argv)
 		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
 	return (0);
 }
+
+#endif
