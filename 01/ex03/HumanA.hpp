@@ -6,15 +6,15 @@
 /*   By: kfu <kfu@student.codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/11/19 16:39:45 by kfu           #+#    #+#                 */
-/*   Updated: 2021/11/26 11:42:11 by kfu           ########   odam.nl         */
+/*   Updated: 2021/12/05 13:02:33 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef HUMANA_H
 # define HUMANA_H
 
-#include <iostream>
-#include "Weapon.hpp"
+# include <iostream>
+# include "Weapon.hpp"
 
 class HumanA {
 	private:

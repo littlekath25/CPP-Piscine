@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   Karen.hpp                                          :+:    :+:            */
+/*   Fixed.hpp                                          :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: kfu <kfu@student.codam.nl>                   +#+                     */
+/*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/12/01 15:15:53 by kfu           #+#    #+#                 */
-/*   Updated: 2021/12/05 12:59:49 by katherine     ########   odam.nl         */
+/*   Created: 2021/12/04 11:49:49 by katherine     #+#    #+#                 */
+/*   Updated: 2021/12/05 12:55:04 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef KAREN_HPP
-# define KAREN_HPP
+#ifndef FIXED_HPP
+# define FIXED_HPP
 
 # include <iostream>
 
-class Karen {
+class Fixed
+{
 	public:
-		void complain(std::string level);
+		Fixed();
+		Fixed(const Fixed &Copy);
+		~Fixed(void);
+		Fixed& operator= (Fixed &Copy);
+		int getRawBits(void) const;
+		void setRawBits(int const raw);
 	private:
-		void debug(void);
-		void info(void);
-		void warning(void);
-		void error(void);
+		static const int _Frac = 8;
+		int _Fixed;
 };
 
 #endif

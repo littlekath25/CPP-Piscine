@@ -6,7 +6,7 @@
 /*   By: kfu <kfu@student.codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/01 15:15:50 by kfu           #+#    #+#                 */
-/*   Updated: 2021/12/01 21:55:08 by katherine     ########   odam.nl         */
+/*   Updated: 2021/12/05 13:01:28 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@ void	Karen::complain(std::string level)
 	};
 	
 	std::string ComplaintLevels[] = {
-		"debug",
-		"info",
-		"warning",
-		"error"
+		"DEBUG",
+		"INFO",
+		"WARNING",
+		"ERROR"
 	};
 
 	for (int i = 0; i < ARRAY_SIZE; i++)

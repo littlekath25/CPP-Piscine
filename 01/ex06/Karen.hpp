@@ -6,16 +6,19 @@
 /*   By: kfu <kfu@student.codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/01 15:15:53 by kfu           #+#    #+#                 */
-/*   Updated: 2021/12/03 16:34:38 by kfu           ########   odam.nl         */
+/*   Updated: 2021/12/05 13:00:12 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#ifndef KAREN_HPP
+# define KAREN_HPP
 
-#define DEBUG 0
-#define INFO 1
-#define WARNING 2
-#define ERROR 3
+# include <iostream>
+
+# define DEBUG 0
+# define INFO 1
+# define WARNING 2
+# define ERROR 3
 
 class Karen {
 	public:
@@ -26,3 +29,5 @@ class Karen {
 		void warning(void);
 		void error(void);
 };
+
+#endif
