@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/04 11:49:47 by katherine     #+#    #+#                 */
-/*   Updated: 2021/12/23 16:23:35 by katherine     ########   odam.nl         */
+/*   Updated: 2021/12/29 15:29:23 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,17 @@
 
 Fixed::Fixed() : _Fixed(0) {
 	std::cout << "Default constructor called." << std::endl;
+	this->_Fixed = 0;
+};
+
+Fixed::Fixed(const int Fixed) {
+	std::cout << "Int constructor called." << std::endl;
+	this->_Fixed = Fixed << this->_Frac;
+};
+
+Fixed::Fixed(const float Frac) {
+	std::cout << "Float constructor called." << std::endl;
+	this->_Fixed = (int)(roundf(Frac * (1 << this->_Frac)));
 };
 
 Fixed::Fixed(const Fixed &Copy) {
@@ -25,7 +36,7 @@ Fixed::~Fixed(void) {
 	std::cout << "Destructor called." << std::endl;
 };
 
-Fixed & Fixed::operator= (Fixed &Copy)
+Fixed & Fixed::operator = (const Fixed &Copy)
 {
 	std::cout << "Assignation operator called." << std::endl;
 	if (this == &Copy)
@@ -33,6 +44,12 @@ Fixed & Fixed::operator= (Fixed &Copy)
 	this->_Fixed = Copy.getRawBits();
 	return (*this);
 };
+
+std::ostream & operator << (std::ostream &Output, Fixed &Copy)
+{
+	Output << Copy.toFloat();
+	return (Output);
+}
 
 int		Fixed::getRawBits(void) const
 {
@@ -45,3 +62,13 @@ void		Fixed::setRawBits(int const raw)
 	std::cout << "Set raw bits." << std::endl;
 	this->_Fixed = raw;
 };
+
+float		Fixed::toFloat(void) const
+{
+	return ((float)this->_Fixed / (float)(1 << this->_Frac));
+}
+
+int			Fixed::toInt(void) const
+{
+	return ((int)(this->_Fixed >> this->_Frac));
+}

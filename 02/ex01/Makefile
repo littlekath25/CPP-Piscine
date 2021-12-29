@@ -5,7 +5,7 @@ RM			=	rm -f
 SRC			= 	main.cpp\
 				Fixed.cpp
 OBJ			= 	$(SRC:%.cpp=%.o)
-FLAGS		=	-Wall -Wextra -Werror
+# FLAGS		=	-Wall -Wextra -Werror
 LIBS		=	-o
 
 all: $(NAME)
