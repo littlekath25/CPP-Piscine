@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/04 11:49:49 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/03 13:46:03 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/03 14:09:01 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,10 @@ class Fixed
 		~Fixed(void);
 		Fixed &operator = (const Fixed &Copy);
 
-		Fixed &operator + (const Fixed &Copy) const;
-		Fixed &operator - (const Fixed &Copy) const;
-		Fixed &operator * (const Fixed &Copy) const;
-		Fixed &operator / (const Fixed &Copy) const;
+		Fixed operator + (const Fixed &Copy) const;
+		Fixed operator - (const Fixed &Copy) const;
+		Fixed operator * (const Fixed &Copy) const;
+		Fixed operator / (const Fixed &Copy) const;
 
 		Fixed & operator++(void);            //Pre increment
         Fixed operator++(int);              //Post increment
