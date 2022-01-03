@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/04 11:49:47 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/03 13:47:03 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/03 13:46:41 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,11 @@ Fixed & Fixed::operator = (const Fixed &Copy)
 		return (*this);
 	this->_Fixed = Copy.getRawBits();
 	return (*this);
+}
+
+Fixed & Fixed::operator = (const Fixed &Copy)
+{
+	
 }
 
 std::ostream & operator << (std::ostream &Output, const Fixed &Copy)
