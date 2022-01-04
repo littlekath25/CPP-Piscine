@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/04 12:21:16 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/04 12:42:10 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/04 14:22:42 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class FragTrap : public ClapTrap
 			AttackDamage = 100;
 		};
 		~FragTrap(void);
-		void highFivesGuys(void);
+		void HighFivesGuys(void);
 };
 
 #endif

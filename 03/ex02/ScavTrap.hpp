@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/03 21:35:55 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/04 12:24:42 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/04 14:22:38 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class ScavTrap : public ClapTrap
 			AttackDamage = 20;
 		};
 		~ScavTrap(void);
-		void guardGate();
+		void GuardGate();
 };
 
 # endif

@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/03 21:07:13 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/04 12:11:41 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/04 14:24:21 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,8 @@
 
 class ClapTrap
 {
-	private:
-		std::string Name;
-
 	protected:
+		std::string Name;
 		int			HitPoints;
 		int			EnergyPoints;
 		int			AttackDamage;

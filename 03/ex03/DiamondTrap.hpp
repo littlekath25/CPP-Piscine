@@ -1,31 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   main.cpp                                           :+:    :+:            */
+/*   DiamondTrap.hpp                                    :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/01/03 21:07:16 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/04 14:46:35 by katherine     ########   odam.nl         */
+/*   Created: 2022/01/04 12:51:15 by katherine     #+#    #+#                 */
+/*   Updated: 2022/01/04 14:31:22 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#ifndef DIAMONDTRAP_HPP
+# define DIAMONDTRAP_HPP
 
-int		main(void)
+# include "FragTrap.hpp"
+# include "ScavTrap.hpp"
+
+# include <iostream>
+
+class DiamondTrap : public FragTrap, public ScavTrap
 {
-	ClapTrap Bob;
-	ClapTrap Frank("Frank");
+	private:
+		std::string Name;
+		
+	public:
+		DiamondTrap(void);
+		DiamondTrap(std::string Name);
+		~DiamondTrap(void);
+		void Attack(std::string const & Target);
+		void WhoAmI(void);
+};
 
-	std::cout << "-----------------------" << std::endl;
-	Bob.Attack("the teacher");
-	Bob.TakeDamage(10);
-	Bob.BeRepaired(6);
-	std::cout << "-----------------------" << std::endl;
-	Frank.Attack("the teacher");
-	Frank.TakeDamage(14);
-	Frank.BeRepaired(60);
-	std::cout << "-----------------------" << std::endl;
-
-	return (0);
-}
+#endif

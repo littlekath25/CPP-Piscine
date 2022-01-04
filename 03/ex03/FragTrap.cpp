@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/04 12:21:06 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/04 12:45:28 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/04 14:22:24 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ FragTrap::~FragTrap(void)
 	std::cout << "FragTrap destructor called." << std::endl;
 }
 
-void FragTrap::highFivesGuys(void)
+void FragTrap::HighFivesGuys(void)
 {
 	std::cout << "Give me a high five... plix.." << std::endl;
 }

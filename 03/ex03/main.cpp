@@ -6,21 +6,29 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/03 21:07:16 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/04 12:48:14 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/04 14:56:11 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
-#include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int		main(void)
 {
-	FragTrap You("You");
-	FragTrap Bob("Bob");
+	DiamondTrap Bob;
+	DiamondTrap Frank("Frank");
 
-	Bob.Attack("You");
-	You.TakeDamage(10);
-	You.BeRepaired(50);
-	Bob.highFivesGuys();
+	std::cout << "-----------------------" << std::endl;
+	Bob.Attack("the teacher");
+	Bob.TakeDamage(10);
+	Bob.BeRepaired(6);
+	Bob.HighFivesGuys();
+	Bob.GuardGate();
+	std::cout << "-----------------------" << std::endl;
+	Frank.Attack("the teacher");
+	Frank.TakeDamage(14);
+	Frank.BeRepaired(60);
+	Frank.HighFivesGuys();
+	Frank.GuardGate();
+	std::cout << "-----------------------" << std::endl;
 	return (0);
 }

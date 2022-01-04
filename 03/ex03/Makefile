@@ -1,13 +1,14 @@
-NAME		= 	fragtrap
+NAME		= 	diamondtrap
 CC			= 	clang++
 RM			=	rm -f
 
 SRC			= 	main.cpp\
 				ClapTrap.cpp\
 				ScavTrap.cpp\
-				FragTrap.cpp
+				FragTrap.cpp\
+				DiamondTrap.cpp
 OBJ			= 	$(SRC:%.cpp=%.o)
-FLAGS		=	-Wall -Wextra -Werror
+FLAGS		=	-Wall -Wextra -Werror -Wshadow -Wno-shadow
 LIBS		=	-o
 
 all: $(NAME)

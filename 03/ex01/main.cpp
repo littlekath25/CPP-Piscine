@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/03 21:07:16 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/04 12:19:08 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/04 14:54:00 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,20 @@
 
 int		main(void)
 {
-	ScavTrap You("You");
-	ScavTrap Bob("Bob");
+	ScavTrap Bob;
+	ScavTrap Frank("Frank");
 
-	Bob.Attack("You");
-	You.TakeDamage(10);
-	You.BeRepaired(50);
-	Bob.guardGate();
+	std::cout << "-----------------------" << std::endl;
+	Bob.Attack("the teacher");
+	Bob.TakeDamage(10);
+	Bob.BeRepaired(6);
+	Bob.GuardGate();
+	std::cout << "-----------------------" << std::endl;
+	Frank.Attack("the teacher");
+	Frank.TakeDamage(14);
+	Frank.BeRepaired(60);
+	Frank.GuardGate();
+	std::cout << "-----------------------" << std::endl;
+
 	return (0);
 }
