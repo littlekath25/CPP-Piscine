@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ScavTrap.cpp                                       :+:    :+:            */
+/*   FragTrap.cpp                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/01/03 21:35:53 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/04 12:24:15 by katherine     ########   odam.nl         */
+/*   Created: 2022/01/04 12:21:06 by katherine     #+#    #+#                 */
+/*   Updated: 2022/01/04 12:45:28 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
-ScavTrap::ScavTrap(void)
+FragTrap::FragTrap(void)
 {
-	std::cout << "ScavTrap default constructor called." << std::endl;
+	std::cout << "FragTrap default constructor called." << std::endl;
 	HitPoints = 100;
-	EnergyPoints = 50;
-	AttackDamage = 20;
+	EnergyPoints = 100;
+	AttackDamage = 30;
 }
 
-ScavTrap::~ScavTrap(void)
+FragTrap::~FragTrap(void)
 {
-	std::cout << "ScavTrap destructor called." << std::endl;
+	std::cout << "FragTrap destructor called." << std::endl;
 }
 
-void ScavTrap::guardGate(void)
+void FragTrap::highFivesGuys(void)
 {
-	std::cout << "ScavTrap enters Guard Keep mode." << std::endl;
+	std::cout << "Give me a high five... plix.." << std::endl;
 }

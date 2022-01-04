@@ -1,10 +1,9 @@
-NAME		= 	scavtrap
+NAME		= 	clap
 CC			= 	clang++
 RM			=	rm -f
 
 SRC			= 	main.cpp\
-				ClapTrap.cpp\
-				ScavTrap.cpp
+				ClapTrap.cpp
 OBJ			= 	$(SRC:%.cpp=%.o)
 FLAGS		=	-Wall -Wextra -Werror
 LIBS		=	-o

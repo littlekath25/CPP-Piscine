@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ScavTrap.cpp                                       :+:    :+:            */
+/*   main.cpp                                           :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/01/03 21:35:53 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/04 12:24:15 by katherine     ########   odam.nl         */
+/*   Created: 2022/01/03 21:07:16 by katherine     #+#    #+#                 */
+/*   Updated: 2022/01/04 12:48:14 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
-ScavTrap::ScavTrap(void)
+int		main(void)
 {
-	std::cout << "ScavTrap default constructor called." << std::endl;
-	HitPoints = 100;
-	EnergyPoints = 50;
-	AttackDamage = 20;
-}
+	FragTrap You("You");
+	FragTrap Bob("Bob");
 
-ScavTrap::~ScavTrap(void)
-{
-	std::cout << "ScavTrap destructor called." << std::endl;
-}
-
-void ScavTrap::guardGate(void)
-{
-	std::cout << "ScavTrap enters Guard Keep mode." << std::endl;
+	Bob.Attack("You");
+	You.TakeDamage(10);
+	You.BeRepaired(50);
+	Bob.highFivesGuys();
+	return (0);
 }
