@@ -1,29 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ICharacter.hpp                                     :+:    :+:            */
+/*   Character.hpp                                      :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/01/05 15:58:22 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/05 19:13:52 by katherine     ########   odam.nl         */
+/*   Created: 2022/01/05 18:54:28 by katherine     #+#    #+#                 */
+/*   Updated: 2022/01/05 19:16:12 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ICHARACTER_HPP
-# define ICHARACTER_HPP
+#ifndef CHARACTER_HPP
+# define CHARACTER_HPP
 
-# include <iostream>
-class AMateria;
+# include "ICharacter.hpp"
 
-class ICharacter
+class Character : public ICharacter
 {
+	private:
+		std::string Name;
+		AMateria *Materia[4];
+
 	public:
-		virtual ~ICharacter() {}
-		virtual std::string const & GetName() const = 0;
-		virtual void Equip(AMateria* Materia) = 0;
-		virtual void Unequip(int Index) = 0;
-		virtual void Use(int Index, ICharacter& Target) = 0;
+		Character();
+		Character(std::string NewName);
+		Character(const Character &Copy);
+		~Character(void);
+
+		std::string const & GetName() const;
+		void Equip(AMateria* Materia);
+		void Unequip(int Index);
+		void Use(int Index, ICharacter& Target);
 };
 
 #endif

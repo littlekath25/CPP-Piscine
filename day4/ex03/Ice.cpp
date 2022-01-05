@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/05 15:34:06 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/05 15:56:57 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/05 18:53:27 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,12 @@ Ice::~Ice(void)
 	std::cout << "Ice destructor called." << std::endl;
 }
 
-AMateria * Ice::clone(void) const
+AMateria * Ice::Clone(void) const
 {
 	return (new Ice(*this));
 }
 
-void	Ice::use(IChracter &Target)
+void	Ice::Use(ICharacter &Target)
 {
-	std::cout << "* shoots an ice bolt at " << " *" << std::endl;
+	std::cout << "* shoots an ice bolt at " << Target.GetName() << " *" << std::endl;
 }

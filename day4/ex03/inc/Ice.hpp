@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/05 15:21:28 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/05 15:55:41 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/05 18:51:39 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ class Ice : public AMateria
 		Ice(void);
 		Ice(const Ice &Copy);
 		~Ice(void);
-		AMateria *clone(void) const;
-		virtual void use(ICharacter &Target);
+		AMateria *Clone(void) const;
+		virtual void Use(ICharacter &Target);
 };
 
 #endif

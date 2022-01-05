@@ -6,7 +6,8 @@ SRC			= 	main.cpp\
 				AMateria.cpp\
 				Ice.cpp\
 				Cure.cpp\
-				ICharacter.cpp
+				ICharacter.cpp\
+				Character.cpp
 OBJ			= 	$(SRC:%.cpp=%.o)
 FLAGS		=	-Wall -Wextra -Werror
 LIBS		=	-o

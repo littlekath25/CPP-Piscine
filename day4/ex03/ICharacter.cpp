@@ -6,7 +6,9 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/05 15:58:01 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/05 15:58:20 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/05 18:49:14 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "ICharacter.hpp"
 
