@@ -1,29 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   WrongCat.cpp                                       :+:    :+:            */
+/*   Cat.cpp                                            :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/04 15:21:33 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/04 16:58:02 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/05 13:09:12 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "WrongCat.hpp"
+#include "Cat.hpp"
 
-WrongCat::WrongCat(void)
+Cat::Cat(void)
 {
-	std::cout << "WrongCat constructor called." << std::endl;
-	this->Type = "WrongCat";
+	std::cout << "Cat constructor called." << std::endl;
+	this->Type = "Cat";
+	this->MyBrain = new Brain();
 }
 
-WrongCat::~WrongCat(void)
+Cat::Cat(const Cat &Copy) 
 {
-	std::cout << "WrongCat destructor called." << std::endl;
+	std::cout << "Cat copy constructor called." << std::endl;
+	this->Type = Copy.GetType();
+	this->MyBrain = new Brain(*Copy.GetBrain());
 }
 
-void WrongCat::MakeSound(void) const
+Cat::~Cat(void)
 {
-	std::cout << "I am a wrong cat :)" << std::endl;
+	std::cout << "Cat destructor called." << std::endl;
+	delete this->MyBrain;
+}
+
+Brain * Cat::GetBrain(void) const
+{
+	return (this->MyBrain);
+}
+
+void Cat::MakeSound(void) const
+{
+	std::cout << "Miaaaauwww" << std::endl;
 }

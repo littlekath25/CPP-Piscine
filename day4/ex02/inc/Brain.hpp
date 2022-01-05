@@ -1,33 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   WrongAnimal.cpp                                    :+:    :+:            */
+/*   Brain.hpp                                          :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/01/04 15:18:08 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/04 17:17:01 by katherine     ########   odam.nl         */
+/*   Created: 2022/01/04 17:35:52 by katherine     #+#    #+#                 */
+/*   Updated: 2022/01/05 12:39:52 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "WrongAnimal.hpp"
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
 
-WrongAnimal::WrongAnimal(void)
-{
-	std::cout << "Animal constructor called." << std::endl;
-}
+# include <iostream>
 
-WrongAnimal::~WrongAnimal(void)
+class Brain
 {
-	std::cout << "Animal destructor called." << std::endl;
-}
+	protected:
+		std::string Ideas[100];
 
-std::string	WrongAnimal::GetType(void) const
-{
-	return (this->Type);
-}
+	public:
+		Brain(void);
+		Brain(const Brain &Copy);
+		~Brain(void);
+		Brain &operator= (const Brain &Copy);
+		std::string GetBrain(int index) const;
+};
 
-void	WrongAnimal::MakeSound(void) const
-{
-	std::cout << "I am a wrong animal :)" << std::endl;
-}
+#endif

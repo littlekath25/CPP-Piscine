@@ -1,27 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   Dog.hpp                                            :+:    :+:            */
+/*   AMateria.hpp                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/01/04 15:21:37 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/04 15:55:25 by katherine     ########   odam.nl         */
+/*   Created: 2022/01/05 13:56:16 by katherine     #+#    #+#                 */
+/*   Updated: 2022/01/05 16:28:48 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-# define DOG_HPP
+#ifndef AMATERIA_HPP
+# define AMATERIA_HPP
 
-# include "Animal.hpp"
 # include <iostream>
+# include "ICharacter.hpp"
 
-class Dog : public Animal
+class AMateria
 {
+	protected:
+		std::string Type;
+		
 	public:
-		Dog(void);
-		~Dog(void);
-		virtual void	MakeSound(void) const;
+		AMateria(void);
+		AMateria(std::string const &Type);
+		AMateria(const AMateria &Copy);
+		~AMateria(void);
+
+		std::string const & getType() const; //Returns the materia type
+		virtual AMateria* clone() const = 0;
+		virtual void use(ICharacter &Target);
 };
 
 #endif

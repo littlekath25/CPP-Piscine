@@ -1,33 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   WrongAnimal.cpp                                    :+:    :+:            */
+/*   main.cpp                                           :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/01/04 15:18:08 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/04 17:17:01 by katherine     ########   odam.nl         */
+/*   Created: 2022/01/04 15:16:35 by katherine     #+#    #+#                 */
+/*   Updated: 2022/01/05 14:10:57 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "WrongAnimal.hpp"
+#include "Dog.hpp"
+#include "Cat.hpp"
+#include "WrongCat.hpp"
 
-WrongAnimal::WrongAnimal(void)
+int		main(void)
 {
-	std::cout << "Animal constructor called." << std::endl;
-}
+	const Animal* Animals = new Animal();
+	Animal WeirdAnimal;
+	Dog	Doggo;
 
-WrongAnimal::~WrongAnimal(void)
-{
-	std::cout << "Animal destructor called." << std::endl;
-}
-
-std::string	WrongAnimal::GetType(void) const
-{
-	return (this->Type);
-}
-
-void	WrongAnimal::MakeSound(void) const
-{
-	std::cout << "I am a wrong animal :)" << std::endl;
+	Doggo.MakeSound();
+	// system("leaks animal");
+	return (0);
 }

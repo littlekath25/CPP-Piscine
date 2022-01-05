@@ -1,33 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   WrongAnimal.cpp                                    :+:    :+:            */
+/*   ICharacter.hpp                                     :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/01/04 15:18:08 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/04 17:17:01 by katherine     ########   odam.nl         */
+/*   Created: 2022/01/05 15:58:22 by katherine     #+#    #+#                 */
+/*   Updated: 2022/01/05 16:29:01 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "WrongAnimal.hpp"
+#ifndef ICHARACTER_HPP
+# define ICHARACTER_HPP
 
-WrongAnimal::WrongAnimal(void)
-{
-	std::cout << "Animal constructor called." << std::endl;
-}
+class AMateria;
 
-WrongAnimal::~WrongAnimal(void)
+class ICharacter
 {
-	std::cout << "Animal destructor called." << std::endl;
-}
+	public:
+		virtual ~ICharacter() {}
+		virtual std::string const & getName() const = 0;
+		virtual void equip(AMateria* m) = 0;
+		virtual void unequip(int idx) = 0;
+		virtual void use(int idx, ICharacter& target) = 0;
+};
 
-std::string	WrongAnimal::GetType(void) const
-{
-	return (this->Type);
-}
-
-void	WrongAnimal::MakeSound(void) const
-{
-	std::cout << "I am a wrong animal :)" << std::endl;
-}
+#endif

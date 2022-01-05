@@ -1,33 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   WrongAnimal.cpp                                    :+:    :+:            */
+/*   Ice.hpp                                            :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/01/04 15:18:08 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/04 17:17:01 by katherine     ########   odam.nl         */
+/*   Created: 2022/01/05 15:21:28 by katherine     #+#    #+#                 */
+/*   Updated: 2022/01/05 15:55:41 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "WrongAnimal.hpp"
+#ifndef ICE_HPP
+# define ICE_HPP
 
-WrongAnimal::WrongAnimal(void)
-{
-	std::cout << "Animal constructor called." << std::endl;
-}
+# include "AMateria.hpp"
 
-WrongAnimal::~WrongAnimal(void)
+class Ice : public AMateria
 {
-	std::cout << "Animal destructor called." << std::endl;
-}
+	public:
+		Ice(void);
+		Ice(const Ice &Copy);
+		~Ice(void);
+		AMateria *clone(void) const;
+		virtual void use(ICharacter &Target);
+};
 
-std::string	WrongAnimal::GetType(void) const
-{
-	return (this->Type);
-}
-
-void	WrongAnimal::MakeSound(void) const
-{
-	std::cout << "I am a wrong animal :)" << std::endl;
-}
+#endif

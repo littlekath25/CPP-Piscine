@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   WrongAnimal.cpp                                    :+:    :+:            */
+/*   WrongAnimal.hpp                                    :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/01/04 15:18:08 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/04 17:17:01 by katherine     ########   odam.nl         */
+/*   Created: 2022/01/04 15:18:06 by katherine     #+#    #+#                 */
+/*   Updated: 2022/01/04 16:57:49 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "WrongAnimal.hpp"
+#ifndef WRONGANIMAL_HPP
+# define WRONGANIMAL_HPP
 
-WrongAnimal::WrongAnimal(void)
-{
-	std::cout << "Animal constructor called." << std::endl;
-}
+# include <iostream>
 
-WrongAnimal::~WrongAnimal(void)
+class WrongAnimal
 {
-	std::cout << "Animal destructor called." << std::endl;
-}
+	protected:
+		std::string	Type;
 
-std::string	WrongAnimal::GetType(void) const
-{
-	return (this->Type);
-}
+	public:
+		WrongAnimal(void);
+		~WrongAnimal(void);
+		std::string 	GetType(void) const;
+		void			MakeSound(void) const;
+};
 
-void	WrongAnimal::MakeSound(void) const
-{
-	std::cout << "I am a wrong animal :)" << std::endl;
-}
+#endif

@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   Cat.hpp                                            :+:    :+:            */
+/*   Animal.hpp                                         :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/01/04 15:21:35 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/04 15:55:22 by katherine     ########   odam.nl         */
+/*   Created: 2022/01/04 15:18:06 by katherine     #+#    #+#                 */
+/*   Updated: 2022/01/05 14:10:18 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-# define CAT_HPP
+#ifndef ANIMAL_HPP
+# define ANIMAL_HPP
 
-# include "Animal.hpp"
 # include <iostream>
 
-class Cat : public Animal
+class Animal
 {
+	protected:
+		std::string	Type;
+		Animal(void);
+
 	public:
-		Cat(void);
-		~Cat(void);
-		virtual void	MakeSound(void) const;
+		virtual ~Animal(void);
+		std::string 	GetType(void) const;
+		virtual void	MakeSound(void) const = 0;
 };
 
 #endif

@@ -1,13 +1,12 @@
-NAME		= 	animal
+NAME		= 	amateria
 CC			= 	clang++
 RM			=	rm -f
 
 SRC			= 	main.cpp\
-				Animal.cpp\
-				Cat.cpp\
-				Dog.cpp\
-				WrongAnimal.cpp\
-				WrongCat.cpp
+				AMateria.cpp\
+				Ice.cpp\
+				Cure.cpp\
+				ICharacter.cpp
 OBJ			= 	$(SRC:%.cpp=%.o)
 FLAGS		=	-Wall -Wextra -Werror
 LIBS		=	-o

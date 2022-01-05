@@ -1,29 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   WrongCat.cpp                                       :+:    :+:            */
+/*   main.cpp                                           :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/01/04 15:21:33 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/04 16:58:02 by katherine     ########   odam.nl         */
+/*   Created: 2022/01/04 15:16:35 by katherine     #+#    #+#                 */
+/*   Updated: 2022/01/05 13:10:37 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Dog.hpp"
+#include "Cat.hpp"
 #include "WrongCat.hpp"
 
-WrongCat::WrongCat(void)
+int		main(void)
 {
-	std::cout << "WrongCat constructor called." << std::endl;
-	this->Type = "WrongCat";
-}
+	const Animal* Animals[4];
 
-WrongCat::~WrongCat(void)
-{
-	std::cout << "WrongCat destructor called." << std::endl;
-}
+	std::cout << "--------- ARRAY ---------" << std::endl;
+	for (int i = 0; i < 4; i++)
+	{
+		if (i % 2 == 0)
+			Animals[i] = new Dog();
+		else
+			Animals[i] = new Cat();
+	}
+	
+	std::cout << "--------- DELETE ---------" << std::endl;
+	for (int i = 0; i < 4; ++i)
+		delete Animals[i];
 
-void WrongCat::MakeSound(void) const
-{
-	std::cout << "I am a wrong cat :)" << std::endl;
+	// system("leaks animal");
+	return (0);
 }
