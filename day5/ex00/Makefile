@@ -1,13 +1,9 @@
-NAME		= 	materia
+NAME		= 	bureaucrat
 CC			= 	clang++
 RM			=	rm -f
 
 SRC			= 	main.cpp\
-				AMateria.cpp\
-				Ice.cpp\
-				Cure.cpp\
-				Character.cpp\
-				MateriaSource.cpp
+				Bureaucrat.cpp
 OBJ			= 	$(SRC:%.cpp=%.o)
 FLAGS		=	-Wall -Wextra -Werror
 LIBS		=	-o

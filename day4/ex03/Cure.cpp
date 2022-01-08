@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/05 15:34:06 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/05 18:53:08 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/08 12:52:45 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,16 @@
 
 Cure::Cure(void)
 {
-	std::cout << "Cure default constructor called." << std::endl;
+	this->Type = "cure";
 }
 
 Cure::Cure(const Cure &Copy) : AMateria(Copy)
 {
-	std::cout << "Cure copy constructor called." << std::endl;
+	this->Type = "cure";
 }
 
 Cure::~Cure(void)
 {
-	std::cout << "Cure destructor called." << std::endl;
 }
 
 AMateria * Cure::Clone(void) const

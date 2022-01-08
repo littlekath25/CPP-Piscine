@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/05 18:54:26 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/05 19:18:50 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/08 13:33:14 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,32 +15,46 @@
 
 Character::Character(void)
 {
-	std::cout << "Character default constructor." << std::endl;
 	for (int i = 0; i < 4; i++)
 		this->Materia[i] = NULL;
 }
 
 Character::Character(std::string NewName) : Name(NewName)
 {
-	std::cout << "Character name constructor called." << std::endl;
 	for (int i = 0; i < 4; i++)
 		this->Materia[i] = NULL;
 }
 
 Character::Character(const Character &Copy)
 {
-	std::cout << "Character copy constructor called." << std::endl;
 	this->Name = Copy.GetName();
+	for (int i = 0; i < 4; i++)
+	{	
+		AMateria *tmp = Copy.GetMateria(i);
+		if (tmp != NULL)
+			this->Materia[i] = tmp->Clone();
+		else
+			this->Materia[i] = NULL;
+	}
 }
 
 Character::~Character(void)
 {
-	std::cout << "Character destructor called." << std::endl;
+	for (int i = 0; i < 4; ++i)
+	{
+		if (this->Materia[i] != NULL)
+			delete this->Materia[i];
+	}
 }
 
 std::string const & Character::GetName() const
 {
 	return (this->Name);
+}
+
+AMateria * Character::GetMateria(int index) const
+{
+	return (this->Materia[index]);
 }
 
 void Character::Equip(AMateria* Materia)
@@ -49,7 +63,7 @@ void Character::Equip(AMateria* Materia)
 	{
 		if (this->Materia[i] == NULL)
 		{
-			this->Materia[i] = Materia;
+			this->Materia[i] = Materia->Clone();
 			break ;
 		}
 	}

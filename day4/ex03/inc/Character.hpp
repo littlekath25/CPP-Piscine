@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/05 18:54:28 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/05 19:16:12 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/07 12:50:33 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ class Character : public ICharacter
 		~Character(void);
 
 		std::string const & GetName() const;
+		AMateria *GetMateria(int index) const;
 		void Equip(AMateria* Materia);
 		void Unequip(int Index);
 		void Use(int Index, ICharacter& Target);

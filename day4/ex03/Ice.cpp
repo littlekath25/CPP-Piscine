@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/05 15:34:06 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/05 18:53:27 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/08 12:52:29 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,16 @@
 
 Ice::Ice(void)
 {
-	std::cout << "Ice default constructor called." << std::endl;
+	this->Type = "ice";
 }
 
 Ice::Ice(const Ice &Copy) : AMateria(Copy)
 {
-	std::cout << "Ice copy constructor called." << std::endl;
+	this->Type = "ice";
 }
 
 Ice::~Ice(void)
 {
-	std::cout << "Ice destructor called." << std::endl;
 }
 
 AMateria * Ice::Clone(void) const

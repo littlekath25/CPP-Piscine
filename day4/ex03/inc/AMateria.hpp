@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/05 13:56:16 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/05 19:08:40 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/07 13:13:47 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class AMateria
 	public:
 		AMateria(std::string const &Type);
 		AMateria(const AMateria &Copy);
-		~AMateria(void);
+		virtual ~AMateria(void);
 
 		std::string const & GetType() const; //Returns the materia type
 		virtual AMateria* Clone() const = 0;

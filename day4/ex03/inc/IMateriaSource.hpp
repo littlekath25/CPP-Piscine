@@ -1,41 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   AMateria.cpp                                       :+:    :+:            */
+/*   IMateriaSource.hpp                                 :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/01/05 14:38:12 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/08 13:22:17 by katherine     ########   odam.nl         */
+/*   Created: 2022/01/07 12:55:55 by katherine     #+#    #+#                 */
+/*   Updated: 2022/01/07 13:24:53 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AMateria.hpp"
+#ifndef IMATERIASOURCE_HPP
+#define IMATERIASOURCE_HPP
 
-AMateria::AMateria(void)
-{
-}
+# include <iostream>
+# include "AMateria.hpp"
 
-AMateria::AMateria(std::string const &Type)
+class IMateriaSource
 {
-	this->Type = Type;
-}
+	public:
+		virtual ~IMateriaSource(void) {}
+		virtual void LearnMateria(AMateria*) = 0;
+		virtual AMateria* CreateMateria(std::string const & Type) = 0;
+};
 
-AMateria::AMateria(const AMateria &Copy)
-{
-	this->Type = Copy.Type;
-}
-
-AMateria::~AMateria(void)
-{
-}
-
-std::string const & AMateria::GetType() const
-{
-	return (this->Type);
-}
-
-void AMateria::Use(ICharacter &Target)
-{
-	std::cout << "AMateria: " << Target.GetName() << std::endl;
-}
+#endif

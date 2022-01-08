@@ -1,41 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   AMateria.cpp                                       :+:    :+:            */
+/*   MateriaSource.hpp                                  :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/01/05 14:38:12 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/08 13:22:17 by katherine     ########   odam.nl         */
+/*   Created: 2022/01/07 13:15:37 by katherine     #+#    #+#                 */
+/*   Updated: 2022/01/07 13:24:48 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AMateria.hpp"
+#ifndef MATERIASOURCE_HPP
+# define MATERIASOURCE_HPP
 
-AMateria::AMateria(void)
-{
-}
+#include "IMateriaSource.hpp"
 
-AMateria::AMateria(std::string const &Type)
+class MateriaSource : public IMateriaSource
 {
-	this->Type = Type;
-}
+	private:
+		AMateria *Materia[4];
 
-AMateria::AMateria(const AMateria &Copy)
-{
-	this->Type = Copy.Type;
-}
+	public:
+		MateriaSource(void);
+		MateriaSource(MateriaSource const &Copy);
+		AMateria *GetMateria(int Index) const;
+		~MateriaSource(void);
 
-AMateria::~AMateria(void)
-{
-}
+		void LearnMateria(AMateria *Materia);
+		AMateria *CreateMateria(std::string const &Type);
+};
 
-std::string const & AMateria::GetType() const
-{
-	return (this->Type);
-}
-
-void AMateria::Use(ICharacter &Target)
-{
-	std::cout << "AMateria: " << Target.GetName() << std::endl;
-}
+#endif
