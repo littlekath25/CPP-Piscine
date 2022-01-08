@@ -6,9 +6,13 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/08 13:35:15 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/08 13:37:15 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/08 17:59:27 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
+int		main(void)
+{
+	return (0);
+}
