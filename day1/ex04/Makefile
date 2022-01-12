@@ -5,7 +5,7 @@ RM			=	rm -f
 SRC			= 	main.cpp
 OBJ			= 	$(SRC:%.cpp=%.o)
 REP			=	*.replace
-FLAGS		=	-Wall -Wextra -Werror
+FLAGS		=	-Wall -Wextra -Werror -std=c++98 -pedantic
 LIBS		=	-o
 
 all: $(NAME)

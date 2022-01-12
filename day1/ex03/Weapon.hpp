@@ -6,7 +6,7 @@
 /*   By: kfu <kfu@student.codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/11/19 16:34:56 by kfu           #+#    #+#                 */
-/*   Updated: 2021/11/26 12:00:29 by kfu           ########   odam.nl         */
+/*   Updated: 2022/01/12 14:37:51 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ class Weapon {
 		{
 			_type = type;
 		};
+
 	private:
 		std::string _type;
 };
