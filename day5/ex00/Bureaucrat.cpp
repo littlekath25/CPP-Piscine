@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/08 13:36:35 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/08 18:26:03 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/11 19:06:29 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 Bureaucrat::Bureaucrat(std::string NewName, int NewGrade) : Name(NewName)
 {
 	if (NewGrade < 1)
-		throw Bureaucrat::GradeTooHighException();
+		throw "Grade too high";
 	else if (NewGrade > 150)
-		throw Bureaucrat::GradeTooLowException();
+		throw "Grade too low";
 	this->Grade = NewGrade;
 }
 
@@ -72,4 +72,10 @@ void	Bureaucrat::DecrementGrade(int Amount)
 		std::cerr << e.what() << '\n';
 	}
 	
+}
+
+std::ostream &operator << (std::ostream &Output, const Bureaucrat Copy)
+{
+	Output << Copy.GetName() << ", bureaucrat grade " << Copy.GetGrade() << std::endl;  
+	return (Output);
 }
