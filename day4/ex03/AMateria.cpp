@@ -6,15 +6,13 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/05 14:38:12 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/08 13:22:17 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/12 18:48:06 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AMateria.hpp"
 
-AMateria::AMateria(void)
-{
-}
+AMateria::AMateria(void) {}
 
 AMateria::AMateria(std::string const &Type)
 {
