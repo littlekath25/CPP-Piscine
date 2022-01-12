@@ -8,7 +8,7 @@ SRC			= 	main.cpp\
 				FragTrap.cpp\
 				DiamondTrap.cpp
 OBJ			= 	$(SRC:%.cpp=%.o)
-FLAGS		=	-Wall -Wextra -Werror -Wshadow -Wno-shadow
+FLAGS		=	-Wall -Wextra -Werror -Wshadow -Wno-shadow -std=c++98 -pedantic
 LIBS		=	-o
 
 all: $(NAME)

@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/04 12:21:16 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/04 14:22:42 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/12 18:31:59 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,7 @@ class FragTrap : public ClapTrap
 {
 	public:
 		FragTrap(void);
-		FragTrap(std::string Name) : ClapTrap(Name){
-			std::cout << "FragTrap name constructor called." << std::endl;
-			HitPoints = 100;
-			EnergyPoints = 100;
-			AttackDamage = 100;
-		};
+		FragTrap(std::string Name);
 		~FragTrap(void);
 		void HighFivesGuys(void);
 };

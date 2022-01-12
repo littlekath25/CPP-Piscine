@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/04 12:51:17 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/04 14:57:11 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/12 18:36:37 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@ DiamondTrap::DiamondTrap(void)
 DiamondTrap::DiamondTrap(std::string Name)
 {
 	std::cout << "Diamond name constructor called." << std::endl;
-	ClapTrap::Name = Name + "_clap_name";
-	this->Name = Name;
-	this->HitPoints = FragTrap::HitPoints;
-	this->EnergyPoints = ScavTrap::EnergyPoints;
-	this->AttackDamage = FragTrap::AttackDamage;
+	ClapTrap::_Name = Name + "_clap_name";
+	this->_Name = Name;
+	this->_HitPoints = FragTrap::_HitPoints;
+	this->_EnergyPoints = ScavTrap::_EnergyPoints;
+	this->_AttackDamage = FragTrap::_AttackDamage;
 }
 
 DiamondTrap::~DiamondTrap(void)
@@ -39,5 +39,5 @@ void	DiamondTrap::Attack(std::string const & Target)
 
 void	DiamondTrap::WhoAmI(void)
 {
-	std::cout << "My own name is " << this->Name << " - " << "My ClapTrap name is " << ClapTrap::Name << std::endl;
+	std::cout << "My own name is " << this->Name << " - " << "My ClapTrap name is " << ClapTrap::_Name << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/03 21:07:13 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/04 14:54:55 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/12 18:31:45 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,20 +18,16 @@
 class ClapTrap
 {
 	private:
-		std::string Name;
+		std::string _Name;
 
 	protected:
-		int			HitPoints;
-		int			EnergyPoints;
-		int			AttackDamage;
+		int			_HitPoints;
+		int			_EnergyPoints;
+		int			_AttackDamage;
 
 	public:
-		ClapTrap(void) : Name("(no name"), HitPoints(10), EnergyPoints(10), AttackDamage(0){
-			std::cout << "ClapTrap default constructor called." << std::endl;
-		};
-		ClapTrap(std::string NewName) : Name(NewName), HitPoints(10), EnergyPoints(10), AttackDamage(0){
-			std::cout << "ClapTrap name constructor called." << std::endl;
-		};
+		ClapTrap(void);
+		ClapTrap(std::string NewName);
 		~ClapTrap(void);
 		void Attack(std::string const & Target);
 		void TakeDamage(unsigned int Amount);

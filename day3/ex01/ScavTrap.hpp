@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/03 21:35:55 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/04 14:22:56 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/12 18:19:43 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,7 @@ class ScavTrap : public ClapTrap
 {
 	public:
 		ScavTrap(void);
-		ScavTrap(std::string Name) : ClapTrap(Name){
-			std::cout << "ScavTrap name constructor called." << std::endl;
-			HitPoints = 100;
-			EnergyPoints = 50;
-			AttackDamage = 20;
-		};
+		ScavTrap(std::string Name);
 		~ScavTrap(void);
 		void GuardGate();
 };
