@@ -1,34 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   main.cpp                                           :+:    :+:            */
+/*   RobotomyRequestForm.hpp                            :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/01/08 13:35:15 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/13 18:25:34 by katherine     ########   odam.nl         */
+/*   Created: 2022/01/13 18:33:44 by katherine     #+#    #+#                 */
+/*   Updated: 2022/01/13 21:48:38 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
-#include "Form.hpp"
+#ifndef ROBOT_HPP
+# define ROBOT_HPP
 
-int		main(void)
+# include "Form.hpp"
+
+class RobotomyRequestForm : public Form
 {
-	try {
-		Bureaucrat Me("Katherine", 5);
-		Form Codam("Codam", 6, 6);
-		Me.SignForm(Codam);
-	}
-	catch (std::exception &Exc) {
-		std::cout << Exc.what() << std::endl;
-	}
-	try {
-		Bureaucrat Me("Katherine", 10);
-		Form Codam("Codam", 6, 6);
-		Me.SignForm(Codam);
-	}
-	catch (std::exception &Exc) {
-		std::cout << Exc.what() << std::endl;
-	}
-}
+	private:
+		RobotomyRequestForm();
+
+	public:
+		RobotomyRequestForm(std::string Target);
+		RobotomyRequestForm(const RobotomyRequestForm &Copy);
+		RobotomyRequestForm &operator=(RobotomyRequestForm const &Copy);
+		~RobotomyRequestForm();
+
+		void	Execute(Bureaucrat const & Executor) const;
+};
+
+#endif
