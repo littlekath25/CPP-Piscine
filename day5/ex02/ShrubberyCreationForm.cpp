@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/13 19:05:30 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/13 22:06:13 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/13 22:06:58 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,5 @@ void	ShrubberyCreationForm::Execute(Bureaucrat const & Executor) const
 		std::cout << "Couldn't open this file" << std::endl;
 	MyFile << SHRUBBERY_TREE;
 	MyFile.close();
+	std::cout << "Shrubbery Creation succesfully executed" << std::endl;
 }
