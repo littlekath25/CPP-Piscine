@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/12 19:12:07 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/13 22:01:30 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/14 10:47:28 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@ class Form
 
 		void			BeSigned(const Bureaucrat Signer);
 		void			Execute(Bureaucrat const & Executor) const;
+		
+		virtual	void	Action(Bureaucrat const & Executor) const = 0;
 
 		class GradeTooHighException : public std::exception {	
 			public:

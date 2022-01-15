@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/13 18:33:44 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/13 21:48:38 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/14 10:55:56 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class RobotomyRequestForm : public Form
 		RobotomyRequestForm &operator=(RobotomyRequestForm const &Copy);
 		~RobotomyRequestForm();
 
-		void	Execute(Bureaucrat const & Executor) const;
+		void	Action(Bureaucrat const & Executor) const;
 };
 
 #endif

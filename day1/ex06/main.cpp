@@ -6,7 +6,7 @@
 /*   By: kfu <kfu@student.codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/01 15:15:55 by kfu           #+#    #+#                 */
-/*   Updated: 2021/12/03 16:45:26 by kfu           ########   odam.nl         */
+/*   Updated: 2022/01/12 18:07:39 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,16 +36,16 @@ int		main(int argc, char **argv)
 		switch(CheckLevel(Complaint))
 		{
 			case DEBUG:
-				Jessica.complain("DEBUG");
+				Jessica.Complain("DEBUG");
 				break ;
 			case INFO:
-				Jessica.complain("INFO");
+				Jessica.Complain("INFO");
 				break ;
 			case WARNING:
-				Jessica.complain("WARNING");
+				Jessica.Complain("WARNING");
 				break ;
 			case ERROR:
-				Jessica.complain("ERROR");
+				Jessica.Complain("ERROR");
 				break ;
 			default:
 				std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;

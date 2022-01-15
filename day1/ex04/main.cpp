@@ -6,7 +6,7 @@
 /*   By: kfu <kfu@student.codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/11/26 12:41:58 by kfu           #+#    #+#                 */
-/*   Updated: 2021/12/01 15:09:18 by kfu           ########   odam.nl         */
+/*   Updated: 2022/01/12 17:56:44 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,10 +71,12 @@ int	main(int argc, char *argv[])
 	OldString = argv[2];
 	NewString = argv[3];
 	if (argc == 4)
+	{
 		Data = open_file_and_parse(argv);
+		Data = find_and_replace(OldString, NewString, Data);
+		copy_to_new_file(argv[1], Data);
+	}
 	else
 		std::cout << "./replace [filename] [string to replace] [new string]" << std::endl;
-	Data = find_and_replace(OldString, NewString, Data);
-	copy_to_new_file(argv[1], Data);
   	return (0);
 }

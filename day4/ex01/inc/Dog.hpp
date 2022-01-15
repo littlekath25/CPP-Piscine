@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/04 15:21:37 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/05 14:05:24 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/12 18:40:12 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 class Dog : public Animal
 {
 	private:
-		Brain *MyBrain;
+		Brain *_MyBrain;
 
 	public:
 		Dog(void);

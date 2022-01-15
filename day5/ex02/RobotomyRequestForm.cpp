@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/13 19:05:30 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/13 22:16:01 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/14 10:56:16 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ RobotomyRequestForm & RobotomyRequestForm::operator=(RobotomyRequestForm const &
 
 RobotomyRequestForm::~RobotomyRequestForm() {}
 
-void	RobotomyRequestForm::Execute(Bureaucrat const & Executor) const
+void	RobotomyRequestForm::Action(Bureaucrat const & Executor) const
 {
 	Form::Execute(Executor);
 	std::cout << "Brrrddrrlllll...... drrrlllll" << std::endl;
@@ -34,4 +34,5 @@ void	RobotomyRequestForm::Execute(Bureaucrat const & Executor) const
 		std::cout << this->GetTarget() << " has been robotomized successfully." << std::endl;
 	else
 		std::cout << this->GetTarget() << " has failed to robotomized." << std::endl;
+
 }

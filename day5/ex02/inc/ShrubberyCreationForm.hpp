@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/13 18:33:44 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/13 21:35:01 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/14 10:55:58 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class ShrubberyCreationForm : public Form
 		ShrubberyCreationForm &operator=(ShrubberyCreationForm const &Copy);
 		~ShrubberyCreationForm();
 
-		void	Execute(Bureaucrat const & Executor) const;
+		void	Action(Bureaucrat const & Executor) const;
 };
 
 # define SHRUBBERY_TREE \

@@ -6,7 +6,7 @@
 /*   By: kfu <kfu@student.codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/29 13:52:08 by kfu           #+#    #+#                 */
-/*   Updated: 2022/01/12 16:40:13 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/12 17:58:14 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@
 # include <iostream>
 
 class Zombie {
+	private:
+		std::string _ZombieName;
+
 	public:
 		Zombie(void);
 		~Zombie(void);
@@ -23,9 +26,6 @@ class Zombie {
 		void SetName( std::string name ) {
 			_ZombieName = name;
 		}
-
-	private:
-		std::string _ZombieName;
 };
 
 Zombie* ZombieHorde( int N, std::string name );

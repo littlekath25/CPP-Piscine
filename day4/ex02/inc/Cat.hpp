@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/04 15:21:35 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/05 14:05:54 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/12 18:44:04 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,13 @@
 class Cat : public Animal
 {
 	private:
-		Brain *MyBrain;
+		Brain *_MyBrain;
 
 	public:
 		Cat(void);
 		Cat(const Cat &Copy);
 		~Cat(void);
-		Brain			*GetBrain(void) const;
+		Brain	*GetBrain(void) const;
 		void	MakeSound(void) const;
 };
 

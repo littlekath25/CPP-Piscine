@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/13 18:33:44 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/13 21:49:15 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/14 10:55:52 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class PresidentialPardonForm : public Form
 		PresidentialPardonForm &operator=(PresidentialPardonForm const &Copy);
 		~PresidentialPardonForm();
 
-		void	Execute(Bureaucrat const & Executor) const;
+		void	Action(Bureaucrat const & Executor) const;
 };
 
 #endif

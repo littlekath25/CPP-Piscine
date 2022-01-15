@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/13 19:05:30 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/13 22:06:58 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/14 10:56:13 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,10 @@ ShrubberyCreationForm & ShrubberyCreationForm::operator=(ShrubberyCreationForm c
 
 ShrubberyCreationForm::~ShrubberyCreationForm() {}
 
-void	ShrubberyCreationForm::Execute(Bureaucrat const & Executor) const
+void	ShrubberyCreationForm::Action(Bureaucrat const & Executor) const
 {
-	std::string FileName = this->GetTarget() + "_shrubbery";
 	std::ofstream MyFile;
+	std::string FileName = this->GetTarget() + "_shrubbery";
 
 	Form::Execute(Executor);
 	MyFile.open(FileName);

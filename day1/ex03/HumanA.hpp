@@ -6,7 +6,7 @@
 /*   By: kfu <kfu@student.codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/11/19 16:39:45 by kfu           #+#    #+#                 */
-/*   Updated: 2022/01/12 14:37:02 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/12 17:58:43 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,12 @@
 
 class HumanA {
 	private:
-		std::string _name;
-		Weapon &_weapon;
+		std::string _Name;
+		Weapon &_Weapon;
 
 	public:
-		HumanA(std::string name, Weapon &weapon)
-			: _name(name), _weapon(weapon)
-		{
- 		};
-		void attack();
+		HumanA(std::string name, Weapon &weapon) : _Name(name), _Weapon(weapon){};
+		void Attack();
 };
 
 #endif

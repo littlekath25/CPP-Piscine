@@ -6,7 +6,7 @@
 /*   By: kfu <kfu@student.codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/01 15:15:53 by kfu           #+#    #+#                 */
-/*   Updated: 2021/12/05 12:59:49 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/12 18:05:26 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,14 @@
 # include <iostream>
 
 class Karen {
-	public:
-		void complain(std::string level);
 	private:
-		void debug(void);
-		void info(void);
-		void warning(void);
-		void error(void);
+		void _Debug(void);
+		void _Info(void);
+		void _Warning(void);
+		void _Error(void);
+
+	public:
+		void Complain(std::string level);
 };
 
 #endif

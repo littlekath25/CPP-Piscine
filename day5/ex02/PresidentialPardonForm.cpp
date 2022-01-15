@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/13 19:05:30 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/13 21:52:51 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/14 10:56:04 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ PresidentialPardonForm & PresidentialPardonForm::operator=(PresidentialPardonFor
 
 PresidentialPardonForm::~PresidentialPardonForm() {}
 
-void	PresidentialPardonForm::Execute(Bureaucrat const & Executor) const
+void	PresidentialPardonForm::Action(Bureaucrat const & Executor) const
 {
 	Form::Execute(Executor);
 	std::cout << this->GetTarget() << " has been pardoned by Zafod Beeblebrox." << std::endl;

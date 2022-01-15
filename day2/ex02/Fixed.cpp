@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/04 11:49:47 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/03 14:09:33 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/14 14:57:59 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ Fixed Fixed::operator * (const Fixed &Copy) const
 {
 	Fixed tmp;
 	
-	tmp.setRawBits(this->_Fixed * (Copy.getRawBits() >> this->_Frac));
+	tmp.setRawBits(Copy.getRawBits() * (this->_Fixed >> this->_Frac));
 	return (tmp);
 }
 

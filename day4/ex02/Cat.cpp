@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/04 15:21:33 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/05 13:09:12 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/12 18:43:18 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,25 +16,25 @@ Cat::Cat(void)
 {
 	std::cout << "Cat constructor called." << std::endl;
 	this->Type = "Cat";
-	this->MyBrain = new Brain();
+	this->_MyBrain = new Brain();
 }
 
 Cat::Cat(const Cat &Copy) 
 {
 	std::cout << "Cat copy constructor called." << std::endl;
 	this->Type = Copy.GetType();
-	this->MyBrain = new Brain(*Copy.GetBrain());
+	this->_MyBrain = new Brain(*Copy.GetBrain());
 }
 
 Cat::~Cat(void)
 {
 	std::cout << "Cat destructor called." << std::endl;
-	delete this->MyBrain;
+	delete this->_MyBrain;
 }
 
 Brain * Cat::GetBrain(void) const
 {
-	return (this->MyBrain);
+	return (this->_MyBrain);
 }
 
 void Cat::MakeSound(void) const

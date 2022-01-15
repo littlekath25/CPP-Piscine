@@ -6,7 +6,7 @@
 /*   By: kfu <kfu@student.codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/01 15:15:53 by kfu           #+#    #+#                 */
-/*   Updated: 2021/12/05 13:00:12 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/12 18:07:44 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,14 @@
 # define ERROR 3
 
 class Karen {
-	public:
-		bool complain(std::string level);
 	private:
-		void debug(void);
-		void info(void);
-		void warning(void);
-		void error(void);
+		void _Debug(void);
+		void _Info(void);
+		void _Warning(void);
+		void _Error(void);
+
+	public:
+		bool Complain(std::string level);
 };
 
 #endif

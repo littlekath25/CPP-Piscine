@@ -6,7 +6,7 @@
 /*   By: kfu <kfu@student.codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/11/19 16:39:47 by kfu           #+#    #+#                 */
-/*   Updated: 2022/01/12 14:37:34 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/12 18:00:55 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,17 +18,14 @@
 
 class HumanB {
 	private:
-		std::string _name;
-		Weapon *_weapon;
+		std::string _Name;
+		Weapon *_Weapon;
 
 	public:
-		HumanB(std::string name) : _name(name){};
-		HumanB(std::string name, Weapon &weapon) : _name(name), _weapon(&weapon){};
-		void	setWeapon(Weapon &weapon)
-		{
-			_weapon = &weapon;
-		};
-		void attack();
+		HumanB(std::string name) : _Name(name){};
+		HumanB(std::string name, Weapon &weapon) : _Name(name), _Weapon(&weapon){};
+		void	SetWeapon(Weapon &weapon);
+		void 	Attack();
 };
 
 #endif
