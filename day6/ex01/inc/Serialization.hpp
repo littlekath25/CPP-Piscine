@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   main.cpp                                           :+:    :+:            */
+/*   Serialization.hpp                                  :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/01/15 20:53:05 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/16 17:42:36 by katherine     ########   odam.nl         */
+/*   Created: 2022/01/16 18:45:53 by katherine     #+#    #+#                 */
+/*   Updated: 2022/01/16 19:36:53 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Scalar.hpp"
+#ifndef SERIALIZATION_HPP
+# define SERIALIZATION_HPP
 
-int		main(int argc, char *argv[])
+#include <iostream>
+
+typedef struct Data
 {
-	Scalar Converter;
+	std::string	Name;
+	int			Age;
+	char		Gender;
+} Data;
 
-	if (argc == 2)
-	{
-		Converter.SetLiteral(argv[1]);
-		std::cout << Converter;
-	}
-	else
-		std::cout << "Please provide one argument" << std::endl;
-	return (0);
-}
+uintptr_t Serialize(Data* ptr);
+Data* Deserialize(uintptr_t raw);
+
+#endif

@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/15 20:20:51 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/15 23:01:34 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/16 17:46:37 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,26 @@
 # define SCALAR_HPP
 
 # include <iostream>
+# include <iomanip>
 # include <exception>
+# include <math.h>
 # include <cmath>
+# include <limits.h>
 
-// CHAR, INT, DOUBLE & FLOAT
-
+enum e_Type
+{
+	CHAR,
+	INT,
+	DOUBLE,
+	FLOAT,
+	INVALID
+};
+		
 class Scalar
 {
 	private:
-		std::string _Target;
+		std::string _Literal;
+		e_Type 		_Type;
 
 	public:
 		Scalar();
@@ -31,13 +42,16 @@ class Scalar
 		Scalar &operator= (const Scalar &Copy);
 		~Scalar();
 
-		void		SetTarget(std::string Target);
-		std::string	GetTarget(void);
+		void		SetLiteral(std::string Literal);
+		void		SetType(e_Type Type);
+		std::string	GetLiteral(void) const;
+		e_Type		GetType(void) const;
 
-		char		ConvertChar(void) const;
-		int			ConvertInt(void) const;
-		float		ConvertFloat(void) const;
-		double		ConvertDouble(void) const;
+		e_Type		FindType(std::string Literal) const;
+		void		ConvertChar(void) const;
+		void		ConverInt(void) const;
+		void		ConvertFloat(void) const;
+		void		ConvertDouble(void) const;
 
 		class NonDisplayableConversion : public std::exception 
 		{
@@ -56,6 +70,6 @@ class Scalar
 		};
 };
 
-std::ostream &operator<< (std::ostream &Output, const Scalar &Copy);
+std::ostream &operator<< (std::ostream &Output, Scalar &Copy);
 
 #endif

@@ -5,23 +5,38 @@
 /*                                                     +:+                    */
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/01/15 20:53:05 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/16 17:42:36 by katherine     ########   odam.nl         */
+/*   Created: 2022/01/16 17:57:52 by katherine     #+#    #+#                 */
+/*   Updated: 2022/01/16 19:38:05 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Scalar.hpp"
+#include "Serialization.hpp"
 
-int		main(int argc, char *argv[])
+uintptr_t Serialize(Data *ptr)
 {
-	Scalar Converter;
+	return (reinterpret_cast<uintptr_t>(ptr));
+}
 
-	if (argc == 2)
-	{
-		Converter.SetLiteral(argv[1]);
-		std::cout << Converter;
-	}
-	else
-		std::cout << "Please provide one argument" << std::endl;
-	return (0);
+Data* Deserialize(uintptr_t raw)
+{
+	return (reinterpret_cast<Data *>(raw));
+}
+
+int		main(void)
+{
+	Data PersonA;
+	Data *PersonB;
+	uintptr_t Output;
+
+	PersonA.Name = "Katherine";
+	PersonA.Age = 28;
+	PersonA.Gender = 'F';
+
+	Output = Serialize(&PersonA);
+	PersonB = Deserialize(Output);
+
+	std::cout << "Name: " << PersonB->Name << "\n";
+	std::cout << "Age: " << PersonB->Age <<  "\n";
+	std::cout << "Gender: " << PersonB->Gender << std::endl ;
+	return(0);
 }

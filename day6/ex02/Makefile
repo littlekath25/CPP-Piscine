@@ -1,9 +1,8 @@
-NAME		= 	convert
+NAME		= 	identify
 CC			= 	clang++
 RM			=	rm -f
 
-SRC			= 	main.cpp\
-				Scalar.cpp
+SRC			= 	main.cpp
 OBJ			= 	$(SRC:%.cpp=%.o)
 FLAGS		=	-Wall -Wextra -Werror -std=c++98 -pedantic
 LIBS		=	-o

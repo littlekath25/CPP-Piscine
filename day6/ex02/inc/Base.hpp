@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   main.cpp                                           :+:    :+:            */
+/*   Base.hpp                                           :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/01/15 20:53:05 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/16 17:42:36 by katherine     ########   odam.nl         */
+/*   Created: 2022/01/16 20:17:56 by katherine     #+#    #+#                 */
+/*   Updated: 2022/01/16 20:35:20 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Scalar.hpp"
+#ifndef BASE_HPP
+# define BASE_HPP
 
-int		main(int argc, char *argv[])
+class Base
 {
-	Scalar Converter;
+	public:
+		virtual ~Base(){};
+};
 
-	if (argc == 2)
-	{
-		Converter.SetLiteral(argv[1]);
-		std::cout << Converter;
-	}
-	else
-		std::cout << "Please provide one argument" << std::endl;
-	return (0);
-}
+Base *Generate(void);
+void Identify(Base* p);
+void Identify(Base& p);
+
+#endif
