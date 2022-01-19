@@ -6,7 +6,7 @@
 /*   By: kfu <kfu@student.codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/19 10:27:25 by kfu           #+#    #+#                 */
-/*   Updated: 2022/01/19 15:40:26 by kfu           ########   odam.nl         */
+/*   Updated: 2022/01/19 16:03:59 by kfu           ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 # include <iostream>
 
-template <typename MyVar> void HelloWorld(MyVar Arg)
+template <typename MyVar> void IncrementAndPrint(MyVar Arg)
 {
-	std::cout << "HELLO WORLD " << Arg << std::endl;
+	std::cout << ++Arg << std::endl;
 }
 
 template <typename MyArray, typename MyLength, typename MyFunc> void Iter(MyArray *Begin, MyLength Length, MyFunc Func)
