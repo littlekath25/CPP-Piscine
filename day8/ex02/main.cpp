@@ -5,28 +5,35 @@
 /*                                                     +:+                    */
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/01/21 09:19:05 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/21 18:28:08 by katherine     ########   odam.nl         */
+/*   Created: 2022/01/23 15:41:36 by katherine     #+#    #+#                 */
+/*   Updated: 2022/01/23 17:40:23 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "EasyFind.hpp"
-#include <vector>
+#include "MutantStack.hpp"
 
-int		main(void)
+int main(void)
 {
-	std::vector<int>	MyArray;
-
-	for (int i = 0; i < 10; i++)
-		MyArray.push_back(i);
-
-	try
-	{
-		std::cout << *EasyFind(MyArray, 2) << std::endl;
-	}
-	catch(const std::exception& Exc)
-	{
-		std::cerr << Exc.what() << std::endl;
-	}
-	
+	MutantStack<int> mstack;
+	mstack.push(5);
+	mstack.push(17);
+	// std::cout << mstack.top() << std::endl;
+	// mstack.pop();
+	// std::cout << mstack.size() << std::endl;
+	// mstack.push(3);
+	// mstack.push(5);
+	// mstack.push(737);
+	// //[...]
+	// mstack.push(0);
+	// MutantStack<int>::iterator it = mstack.begin();
+	// MutantStack<int>::iterator ite = mstack.end();
+	// ++it;
+	// --it;
+	// while (it != ite)
+	// {
+	// std::cout << *it << std::endl;
+	// ++it;
+	// }
+	// std::stack<int> s(mstack);
+	return (0);
 }

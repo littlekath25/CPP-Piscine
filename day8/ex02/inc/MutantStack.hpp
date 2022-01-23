@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   main.cpp                                           :+:    :+:            */
+/*   MutantStack.hpp                                    :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/01/21 09:19:05 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/21 18:28:08 by katherine     ########   odam.nl         */
+/*   Created: 2022/01/23 15:41:21 by katherine     #+#    #+#                 */
+/*   Updated: 2022/01/23 17:12:45 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "EasyFind.hpp"
-#include <vector>
+#ifndef MUTANTSTACK_HPP
+# define MUTANTSTACK_HPP
 
-int		main(void)
+# include <iostream>
+# include <stack>
+
+template <typename T>
+class MutantStack : public std::stack<T>
 {
-	std::vector<int>	MyArray;
+	public:
+		MutantStack();
+		MutantStack(MutantStack const &Copy);
+		~MutantStack();
+};
 
-	for (int i = 0; i < 10; i++)
-		MyArray.push_back(i);
-
-	try
-	{
-		std::cout << *EasyFind(MyArray, 2) << std::endl;
-	}
-	catch(const std::exception& Exc)
-	{
-		std::cerr << Exc.what() << std::endl;
-	}
-	
-}
+#endif

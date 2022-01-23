@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/03 21:07:15 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/21 09:46:10 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/21 09:49:58 by katherine     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,6 @@ ClapTrap::ClapTrap(std::string NewName) : _Name(NewName), _HitPoints(10), _Energ
 ClapTrap::~ClapTrap(void)
 {
 	std::cout << "Destructor called." << std::endl;
-	this->_HitPoints = 10;
-	this->_EnergyPoints = 10;
-	this->_AttackDamage = 0;
 }
 
 void ClapTrap::Attack(std::string const & Target)
