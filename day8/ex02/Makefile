@@ -2,8 +2,7 @@ NAME		= 	mutantstack
 CC			= 	clang++
 RM			=	rm -f
 
-SRC			= 	main.cpp\
-				MutantStack.cpp
+SRC			= 	main.cpp
 OBJ			= 	$(SRC:%.cpp=%.o)
 FLAGS		=	-Wall -Wextra -Werror -std=c++98 -pedantic
 LIBS		=	-o
