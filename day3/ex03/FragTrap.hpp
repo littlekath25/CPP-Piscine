@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/04 12:21:16 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/12 18:38:05 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/28 17:55:25 by kfu           ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,11 @@ class FragTrap : virtual public ClapTrap
 	public:
 		FragTrap(void);
 		FragTrap(std::string Name);
+		FragTrap(const FragTrap &Copy);
+		FragTrap &operator= (const FragTrap &Copy);
 		~FragTrap(void);
 		void HighFivesGuys(void);
+		void Attack(std::string const & Target);
 };
 
 #endif

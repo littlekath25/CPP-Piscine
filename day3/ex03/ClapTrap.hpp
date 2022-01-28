@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/03 21:07:13 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/12 18:35:57 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/28 17:45:46 by kfu           ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,11 @@ class ClapTrap
 	public:
 		ClapTrap(void);
 		ClapTrap(std::string NewName);
+		ClapTrap(const ClapTrap &Copy);
+		ClapTrap &operator= (const ClapTrap &Copy);
 		~ClapTrap(void);
 
-		void Attack(std::string const & Target);
+		virtual void Attack(std::string const & Target);
 		void TakeDamage(unsigned int Amount);
 		void BeRepaired(unsigned int Amount);
 };

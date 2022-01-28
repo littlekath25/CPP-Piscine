@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/03 21:07:16 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/12 18:18:45 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/28 17:07:54 by kfu           ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,10 @@ int		main(void)
 	Bob.GuardGate();
 	std::cout << "-----------------------" << std::endl;
 	Frank.Attack("the teacher");
-	Frank.TakeDamage(14);
-	Frank.BeRepaired(60);
+	Frank.TakeDamage(40);
+	Frank.BeRepaired(40);
 	Frank.GuardGate();
+	Frank.TakeDamage(100);
 	std::cout << "-----------------------" << std::endl;
 
 	return (0);
