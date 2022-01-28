@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/04 15:21:35 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/12 18:42:47 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/28 19:03:56 by kfu           ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ class WrongCat : public WrongAnimal
 {
 	public:
 		WrongCat(void);
+		WrongCat(const WrongCat &Copy);
+		WrongCat &operator= (const WrongCat &Copy);
 		~WrongCat(void);
 		void	MakeSound(void) const;
 };

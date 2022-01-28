@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/04 15:18:08 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/12 18:46:32 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/28 18:59:44 by kfu           ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,19 @@
 Animal::Animal(void)
 {
 	std::cout << "Animal constructor called." << std::endl;
+}
+
+Animal::Animal(const Animal &Copy)
+{
+	std::cout << "Animal copy constructor called." << std::endl;
+	*this = Copy;
+}
+
+Animal & Animal::operator= (const Animal &Copy)
+{
+	std::cout << "Animal assignation constructor called." << std::endl;
+	this->Type = Copy.GetType();
+	return (*this);
 }
 
 Animal::~Animal(void)

@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/04 15:21:38 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/12 18:43:16 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/28 19:03:02 by kfu           ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,13 @@ Dog::Dog(const Dog &Copy)
 	std::cout << "Dog copy constructor called." << std::endl;
 	this->Type = Copy.GetType();
 	this->_MyBrain = new Brain(*Copy.GetBrain());
+}
+
+Dog & Dog::operator= (const Dog &Copy)
+{
+	std::cout << "Dog assignation constructor called." << std::endl;
+	this->Animal::operator=(Copy);
+	return (*this);
 }
 
 Dog::~Dog(void)
