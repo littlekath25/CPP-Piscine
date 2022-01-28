@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/05 14:38:12 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/12 18:48:06 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/28 19:14:23 by kfu           ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,13 @@ AMateria::AMateria(std::string const &Type)
 
 AMateria::AMateria(const AMateria &Copy)
 {
-	this->Type = Copy.Type;
+	this->Type = Copy.GetType();
+}
+
+AMateria & AMateria::operator=(const AMateria &Copy)
+{
+	this->Type = Copy.GetType();
+	return (*this);
 }
 
 AMateria::~AMateria(void)

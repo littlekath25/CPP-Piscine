@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/05 15:34:06 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/08 12:52:45 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/28 19:14:54 by kfu           ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,12 @@ Cure::Cure(void)
 Cure::Cure(const Cure &Copy) : AMateria(Copy)
 {
 	this->Type = "cure";
+}
+
+Cure & Cure::operator= (const Cure &Copy)
+{
+	this->AMateria::operator=(Copy);
+	return (*this);
 }
 
 Cure::~Cure(void)

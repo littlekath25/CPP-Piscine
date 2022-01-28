@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/05 13:56:16 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/12 18:47:07 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/28 19:05:06 by kfu           ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ class AMateria
 	public:
 		AMateria(std::string const &Type);
 		AMateria(const AMateria &Copy);
+		AMateria &operator=(const AMateria &Copy);
 		virtual ~AMateria(void);
 
 		std::string const & GetType() const;

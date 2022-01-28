@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/05 15:34:06 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/08 12:52:29 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/28 19:14:38 by kfu           ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,12 @@ Ice::Ice(void)
 Ice::Ice(const Ice &Copy) : AMateria(Copy)
 {
 	this->Type = "ice";
+}
+
+Ice & Ice::operator= (const Ice &Copy)
+{
+	this->AMateria::operator=(Copy);
+	return (*this);
 }
 
 Ice::~Ice(void)

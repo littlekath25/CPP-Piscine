@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/05 18:54:26 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/12 18:48:07 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/28 19:20:01 by kfu           ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,23 @@ Character::Character(const Character &Copy)
 		else
 			this->Materia[i] = NULL;
 	}
+}
+
+Character & Character::operator=(const Character &Copy)
+{
+	if (this != &Copy)
+	{
+		this->Name = Copy.GetName();
+		for (int i = 0; i < 4; i++)
+		{	
+			AMateria *tmp = Copy.GetMateria(i);
+			if (tmp != NULL)
+				this->Materia[i] = tmp->Clone();
+			else
+				this->Materia[i] = NULL;
+		}
+	}
+	return (*this);
 }
 
 Character::~Character(void)

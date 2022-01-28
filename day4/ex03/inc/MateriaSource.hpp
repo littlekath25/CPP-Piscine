@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/07 13:15:37 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/12 18:47:24 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/28 19:12:48 by kfu           ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ class MateriaSource : public IMateriaSource
 
 	public:
 		MateriaSource(void);
-		MateriaSource(MateriaSource const &Copy);
+		MateriaSource(const MateriaSource &Copy);
+		MateriaSource &operator=(const MateriaSource &Copy);
 		AMateria *GetMateria(int Index) const;
 		~MateriaSource(void);
 

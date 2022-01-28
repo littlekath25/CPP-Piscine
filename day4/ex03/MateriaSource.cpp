@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/07 13:15:34 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/12 18:48:12 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/28 19:20:36 by kfu           ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ MateriaSource::MateriaSource(void)
 		this->Materia[i] = NULL;
 }
 
-MateriaSource::MateriaSource(MateriaSource const &Copy)
+MateriaSource::MateriaSource(const MateriaSource &Copy)
 {
 	for (int i = 0; i < 4; i++)
 	{	
@@ -28,6 +28,22 @@ MateriaSource::MateriaSource(MateriaSource const &Copy)
 		else
 			this->Materia[i] = NULL;
 	}
+}
+
+MateriaSource & MateriaSource::operator=(const MateriaSource &Copy)
+{
+	if (this != &Copy)
+	{
+		for (int i = 0; i < 4; i++)
+		{	
+			AMateria *tmp = Copy.GetMateria(i);
+			if (tmp != NULL)
+				this->Materia[i] = tmp->Clone();
+			else
+				this->Materia[i] = NULL;
+		}
+	}
+	return (*this);
 }
 
 AMateria * MateriaSource::GetMateria(int Index) const

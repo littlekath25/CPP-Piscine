@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/05 15:16:40 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/12 18:47:11 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/28 19:09:45 by kfu           ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ class Cure : public AMateria
 	public:
 		Cure(void);
 		Cure(const Cure &Copy);
+		Cure &operator= (const Cure &Copy);
 		~Cure(void);
 		AMateria *Clone(void) const;
 		virtual void Use(ICharacter &Target);

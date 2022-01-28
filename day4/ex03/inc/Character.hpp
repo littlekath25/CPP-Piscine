@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/05 18:54:28 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/12 18:47:05 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/28 19:07:48 by kfu           ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ class Character : public ICharacter
 		Character();
 		Character(std::string NewName);
 		Character(const Character &Copy);
+		Character &operator=(const Character &Copy);
 		~Character(void);
 
 		std::string const & GetName() const;
