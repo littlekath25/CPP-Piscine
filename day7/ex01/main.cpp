@@ -6,7 +6,7 @@
 /*   By: kfu <kfu@student.codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/19 15:25:22 by kfu           #+#    #+#                 */
-/*   Updated: 2022/01/19 16:04:07 by kfu           ########   odam.nl         */
+/*   Updated: 2022/03/23 10:38:56 by kfu           ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ int	main(void)
 	float FloatArray[3] = {10.2f, 11.2f, 13.2f};
 	int FloatSize = 3;
 
-	Iter(IntArray, IntSize, IncrementAndPrint<int>);
+	Iter(IntArray, IntSize, PrintVar);
 	std::cout << "------------------------" << std::endl;
-	Iter(CharArray, CharSize, IncrementAndPrint<char>);
+	Iter(CharArray, CharSize, PrintVar);
 	std::cout << "------------------------" << std::endl;
-	Iter(FloatArray, FloatSize, IncrementAndPrint<float>);
+	Iter(FloatArray, FloatSize, PrintVar);
 }

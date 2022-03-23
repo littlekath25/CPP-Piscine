@@ -6,7 +6,7 @@
 /*   By: kfu <kfu@student.codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/19 10:27:25 by kfu           #+#    #+#                 */
-/*   Updated: 2022/01/19 16:03:59 by kfu           ########   odam.nl         */
+/*   Updated: 2022/03/23 10:40:12 by kfu           ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,15 @@
 
 # include <iostream>
 
-template <typename MyVar> void IncrementAndPrint(MyVar Arg)
+template <typename MyVar> void PrintVar(MyVar Arg)
 {
-	std::cout << ++Arg << std::endl;
+	std::cout << Arg << std::endl;
 }
 
-template <typename MyArray, typename MyLength, typename MyFunc> void Iter(MyArray *Begin, MyLength Length, MyFunc Func)
+template <typename MyArray> void Iter(MyArray *Array, int Length, void (*Func)(MyArray Value))
 {
 	for (int i = 0; i < Length; ++i)
-		Func(Begin[i]);
-} 
+		Func(Array[i]);
+}
 
 #endif
