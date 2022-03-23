@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/04 15:21:38 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/12 18:39:28 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/28 18:50:03 by kfu           ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,17 @@ Dog::Dog(void)
 {
 	std::cout << "Dog constructor called." << std::endl;
 	this->Type = "Dog";
+}
+
+Dog::Dog(const Dog &Copy) : Animal(Copy) {
+	std::cout << "Dog copy constructor called." << std::endl;
+}
+
+Dog & Dog::operator= (const Dog &Copy)
+{
+	std::cout << "Dog assignation constructor called." << std::endl;
+	this->Animal::operator=(Copy);
+	return (*this);
 }
 
 Dog::~Dog(void)

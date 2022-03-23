@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/04 17:37:56 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/12 18:40:29 by katherine     ########   odam.nl         */
+/*   Updated: 2022/02/01 19:06:36 by kfu           ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,9 @@ Brain::Brain(void)
 
 Brain::Brain(const Brain &Copy)
 {
-		std::cout << "Brain copy constructor called." << std::endl;
-		for (int i = 0; i < 100; i++)
-			this->Ideas[i] = Copy.Ideas[i];
-}
-
-Brain::~Brain(void)
-{
-	std::cout << "Brain destructor called." << std::endl;
+	std::cout << "Brain copy constructor called." << std::endl;
+	for (int i = 0; i < 100; i++)
+		this->Ideas[i] = Copy.Ideas[i];
 }
 
 Brain & Brain::operator=(const Brain &Copy)
@@ -40,6 +35,11 @@ Brain & Brain::operator=(const Brain &Copy)
 			this->Ideas[i] = Copy.GetBrain(i);
 	}
 	return (*this);
+}
+
+Brain::~Brain(void)
+{
+	std::cout << "Brain destructor called." << std::endl;
 }
 
 std::string Brain::GetBrain(int index) const

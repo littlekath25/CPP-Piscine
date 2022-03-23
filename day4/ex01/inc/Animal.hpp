@@ -6,7 +6,7 @@
 /*   By: katherine <katherine@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/04 15:18:06 by katherine     #+#    #+#                 */
-/*   Updated: 2022/01/12 18:39:57 by katherine     ########   odam.nl         */
+/*   Updated: 2022/01/28 18:55:09 by kfu           ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ class Animal
 
 	public:
 		Animal(void);
+		Animal(const Animal &Copy);
+		Animal &operator= (const Animal &Copy);
 		virtual ~Animal(void);
 		std::string 	GetType(void) const;
 		virtual void	MakeSound(void) const;
