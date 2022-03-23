@@ -6,7 +6,7 @@
 /*   By: kfu <kfu@student.codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/19 16:05:18 by kfu           #+#    #+#                 */
-/*   Updated: 2022/01/20 20:40:24 by katherine     ########   odam.nl         */
+/*   Updated: 2022/03/23 10:44:28 by kfu           ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ class Array
 		Array(unsigned int N) : _MyArray(new T[N]), _Size(N) {};
 
 		Array(const Array &Copy) {
+			_Size = Copy._Size;
 			_MyArray = new T[Copy._Size];
 			for (int i = 0; i < _Size; ++i)
 				_MyArray[i] = Copy._MyArray[i];
